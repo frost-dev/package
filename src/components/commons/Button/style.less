@@ -1,0 +1,63 @@
+@import '../../../assets/less/style.less';
+
+.YearEndReview-Btn {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	font-family: @font-GothamRndSSm-Bold;
+	text-decoration: none;
+	font-size: 0.32rem;
+
+	img,
+	svg {
+		margin-right: 8px;
+		width: 36px;
+		height: 36px;
+	}
+
+	&__share {
+		line-height: 1;
+		letter-spacing: -0.16px;
+		color: @color-white;
+		border: 1px solid rgba(255, 255, 255, 0.4);
+		border-radius: 100px;
+		padding: 16px 24px 16px 16px;
+		width: 216px;
+		justify-content: center;
+		box-sizing: border-box;
+	}
+
+	&__next {
+		font-family: @font-ProximaSoft-Bold;
+		line-height: 1.2;
+		color: @color-white;
+
+		svg {
+			order: 2;
+			width: 48px;
+			height: 48px;
+			margin: 0;
+		}
+	}
+
+	&__launch {
+		font-family: @font-GothamRndSSm-Bold;
+		font-size: 1.14rem;
+		color: @color-bright-blue;
+		background: @color-white;
+		padding: 16px 0px;
+		width: 100%;
+		line-height: 1;
+		letter-spacing: -0.16px;
+		border-radius: 50px;
+		display: flex;
+		justify-content: center;
+
+		&.transparent {
+			background: transparent;
+			padding: 12px 0px;
+			font-size: 1rem;
+			letter-spacing: -0.14px;
+		}
+	}
+}

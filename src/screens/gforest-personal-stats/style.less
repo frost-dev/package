@@ -1,0 +1,58 @@
+@import '../../assets/less/variables/_variables.less';
+
+.gforest-cover {
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+	height: 100dvh;
+	background: url('../../assets/images/plain/gforest-cover-bg.jpg') center/cover no-repeat;
+	padding: 112px 48px 80px;
+
+	& .learn-more-container {
+		padding: 0px 8px;
+		margin-top: 56px;
+	}
+
+	& > .gforest-cover-header {
+		margin-top: 48px;
+	}
+}
+
+.gforest-cover-header {
+	font-family: @font-ProximaSoft-Medium;
+	font-size: 0.4rem;
+	color: @color-dark-green;
+	line-height: 1.2;
+
+	& > .gforest-sub-header {
+		font-size: 0.28rem;
+	}
+}
+
+.gforest-sub-header {
+	color: rgba(6, 36, 19, 0.8);
+
+	&.reduced {
+		margin-top: 8px;
+	}
+
+	& > .gforest-cover-highlight {
+		color: rgba(6, 36, 19, 1);
+	}
+}
+
+.gforest-cover-highlight {
+	font-family: @font-ProximaSoft-Bold;
+	display: block;
+
+	&.trees {
+		font-size: 0.88rem;
+		line-height: 1;
+		margin-top: 8px;
+		letter-spacing: -1.76px;
+	}
+}
+
+.gforest-wrapper {
+	margin-top: auto;
+}

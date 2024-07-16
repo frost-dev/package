@@ -1,0 +1,81 @@
+@import '../../assets/less/style.less';
+
+.YearEndBarGraph {
+	margin-top: auto;
+	padding-bottom: 248px;
+
+	&__title {
+		font-family: @font-ProximaSoft-Bold;
+		text-decoration: none;
+		font-size: 0.2rem;
+		line-height: 1.2;
+		letter-spacing: 0.2px;
+		text-transform: uppercase;
+		color: rgba(145, 154, 108, 0.8);
+	}
+
+	&__bar-graph {
+		display: flex;
+		justify-content: space-around;
+		align-items: flex-end;
+		height: calc(100vh - 500px);
+		gap: 8px;
+		margin-top: 16px;
+	}
+
+	&__bar {
+		color: white;
+		text-align: center;
+		transition: height 0.5s ease-in-out;
+		width: 100vw;
+		position: relative;
+		max-width: 32vw;
+		border-top-left-radius: 8px;
+		border-top-right-radius: 8px;
+		margin-top: 16px;
+	}
+
+	&__bar-content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: 100%;
+		opacity: 0;
+		transition: opacity 3s ease;
+
+		&.fade-in {
+			opacity: 1;
+		}
+	}
+
+	&__bar-icon > img {
+		position: absolute;
+		bottom: 24px;
+		width: 64px;
+		height: 64px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	&__bar-value {
+		position: absolute;
+		top: 24px;
+		font-size: 0.32rem;
+		font-family: @font-ProximaSoft-Bold;
+		line-height: 1.2;
+		color: @color-white;
+		letter-spacing: 0.32px;
+		text-align: center;
+	}
+
+	&__bar-label {
+		font-size: 0.24rem;
+		font-family: @font-ProximaSoft-SemiBold;
+		line-height: 1.2;
+		color: #f1f8d6;
+		letter-spacing: 0.24px;
+		text-align: center;
+		opacity: 0.8;
+		margin-top: 24px;
+	}
+}

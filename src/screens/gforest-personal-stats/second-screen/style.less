@@ -1,0 +1,41 @@
+@import '../../../assets/less/style.less';
+
+.YearEndReview {
+	position: relative;
+	padding: 32px 48px 0;
+}
+
+.YearEndReview-personal-stats {
+	background: linear-gradient(180deg, #052312 0%, #0f3e24 100%);
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+
+	&__cta {
+		display: flex;
+		justify-content: space-between;
+		padding: 48px 48px 80px;
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+
+	.YearEndReview-personal-stats-heading {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		gap: 32px;
+		align-items: center;
+		padding-right: 16px;
+
+		&__icon {
+			cursor: pointer;
+
+			svg {
+				width: 46px;
+				height: 46px;
+			}
+		}
+	}
+}

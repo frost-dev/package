@@ -1,0 +1,93 @@
+@import '../../../assets/less/style.less';
+
+.YearEnd-two-tiles {
+	height: 100%;
+
+	&__wrap {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding-bottom: 12px;
+	}
+
+	&__content {
+		height: 353px;
+		margin: auto 0;
+	}
+
+	&__title {
+		font-size: 2.57rem;
+		line-height: 1;
+		letter-spacing: -0.04em;
+		color: @color-white;
+	}
+
+	&__description {
+		font-family: @font-ProximaSoft-SemiBold;
+		font-weight: 600;
+		font-size: 0.71rem;
+		line-height: 1.4;
+		color: rgba(255, 255, 255, 0.7);
+		margin-top: 8px;
+	}
+
+	&__blocks {
+		display: flex;
+		gap: 4px;
+		width: 100%;
+		justify-content: center;
+		margin-top: 40px;
+	}
+
+	&__block {
+		padding: 23px 12px;
+		border-radius: 8px;
+		color: @color-white;
+		width: 100%;
+
+		> p {
+			font-family: @font-ProximaSoft-SemiBold;
+			font-weight: 600;
+			font-size: 0.71rem;
+			line-height: 1.2;
+			letter-spacing: -0.02em;
+			color: rgba(255, 255, 255, 0.8);
+
+			span {
+				font-size: 1.17rem;
+				margin-top: 4px;
+				display: block;
+			}
+		}
+	}
+
+	&__block-title {
+		font-size: 0.71rem;
+		line-height: 1;
+		letter-spacing: -0.01em;
+		color: rgba(255, 255, 255, 0.8);
+		margin-top: 6px;
+	}
+
+	&__title,
+	&__block-title {
+		font-family: @font-ProximaSoft-Bold;
+	}
+}
+
+.YearEnd-Share-Footer {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+
+	> span {
+		font-family: @font-Gilroy-Bold;
+		text-transform: uppercase;
+		font-size: 0.57rem;
+		line-height: 1.4;
+		letter-spacing: 0.2em;
+		color: rgba(255, 255, 255, 0.5);
+	}
+}

@@ -1,0 +1,44 @@
+@import '../../assets/less/variables/_variables.less';
+
+.flashback-details {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	margin-top: 24px;
+
+	svg {
+		width: 32px;
+		height: 32px;
+	}
+}
+
+.slider-screen-title {
+	font-size: 0.2rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-family: @font-ProximaSoft-Bold;
+	color: @color-dark-green;
+	line-height: 1;
+	letter-spacing: -0.1px;
+}
+
+.flashback-sliders {
+	display: flex;
+	column-gap: 4px;
+	white-space: nowrap;
+	width: 100%;
+}
+
+.slider-container {
+	height: 8px;
+	width: 100%;
+	border-radius: 200px;
+	background-color: @color-dark-green;
+	overflow: hidden;
+
+	& > .slider-progress {
+		background-color: @color-dark-green;
+		height: 8px;
+		width: 100%;
+	}
+}

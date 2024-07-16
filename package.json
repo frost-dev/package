@@ -1,0 +1,19 @@
+{
+  "name": "year-end-review-ui-2024",
+  "version": "1.0.0",
+  "description": "Year end review description.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lottie-web": "^5.12.2",
+    "less": "^4.2.0",
+    "less-loader": "^5.0.0"
+  },
+  "devDependencies": {
+    "vue": "2.5.8"
+  }
+}
