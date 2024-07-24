@@ -1,0 +1,83 @@
+@import '../../assets/less/style.less';
+
+.YearEndReview-bills {
+    height: 100dvh;
+    background: @color-pale-blue;
+    padding: @padding-cover-screens;
+    background: url('../../assets/images/plain/billgs-bg.jpg') center / cover no-repeat;
+    position: relative;
+
+
+    & .YearEndReview__h2 {
+        color: @color-electric-blue;
+        display: flex;
+        flex-direction: column;
+
+        & > .YearEndReview-bills__span-amount {
+            font-family: @font-ProximaSoft-Bold;
+            font-size: 0.64rem;
+            color: @color-electric-blue;
+            line-height: 1;
+            letter-spacing: -1.28px;
+            margin-top: 32px;
+        }
+    }
+
+    &__content {
+        margin-top: 64px;
+    }
+
+    &__description {
+        font-family: @font-ProximaSoft-Medium;
+        font-size: 0.32rem;
+        line-height: 1.2;
+        color: @color-dusk-blue;
+        margin-top: 48px;
+
+        & > span {
+            font-family: @font-ProximaSoft-Bold;
+            color: @color-dusk-blue;
+        }
+    }
+
+    &__categories {
+        max-width: calc(100vw - 51vw);
+        display: flex;
+        flex-direction: column;
+        gap: 20.14px;
+        width: 100%;
+        position: absolute;
+        left: 50%;
+        top:50%;
+        transform: translate(-36%, 11vh);
+    }
+
+    &__wrap {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        color: @color-cerulean-blue;
+       
+
+        & .YearEndReview-bills__item {
+            font-family: @font-ProximaSoft-SemiBold;
+            font-size: 3.328vw;
+            line-height: 1;
+        }
+
+        & .YearEndReview-bills__amount {
+            font-family: @font-ProximaSoft-Regular;
+            font-size: 2.85vw;
+            line-height: 1;
+        }
+    }
+
+    & .YearEndReview-Btn__share {
+        color: @color-dusk-blue;
+        border: 1px solid @color-dusk-blue;
+    }
+
+    & .YearEndReview-Btn.YearEndReview-Btn__next {
+        color: @color-dusk-blue;
+    }
+}

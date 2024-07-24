@@ -1,0 +1,71 @@
+@import '../../assets/less/style.less';
+
+.YearEndReview-top-three-activities {
+
+    height: 100dvh;
+    background: url('../../assets/images/top-3-activities/background.jpg') center / cover no-repeat;
+    padding: @padding-cover-screens;
+    display: flex;
+    flex-direction: column;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin-top: 236px;
+    }
+
+    &__preamble {
+        font-family: @font-ProximaSoft-Medium;
+        font-size: 0.44rem;
+        line-height: 1.2;
+        color: @color-white;
+    }
+    
+    &__title {
+        font-family: @font-ProximaSoft-Bold;
+        font-size: 0.96rem;
+        line-height: 1;
+        letter-spacing: -1.92px;
+        background: linear-gradient(180deg, rgba(246, 249, 255, 1) 30%, rgba(2, 139, 255, 1) 180%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &__heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    & > .learn-more-container {
+        margin-top: auto;
+    }
+
+    .YearEndReview-personal-stats-heading {
+		&__icon {
+			cursor: not-allowed;
+
+			svg {
+				width: 46px;
+				height: 46px;
+			}
+		}
+	}
+}
+
+.YearEndReview__h2 {
+    &.top-three-activities {
+        font-family: @font-ProximaSoft-Medium;
+        font-size: 0.56rem;
+        color: rgba(255, 255, 255, 1);
+        line-height: 1.2;
+
+        svg {
+            width: 46px;
+            height: 46px;
+        }
+    }
+}
