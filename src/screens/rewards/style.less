@@ -1,0 +1,132 @@
+@import '../../assets/less/style.less';
+
+.YearEndReview-rewards {
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+	height: 100dvh;
+	background: linear-gradient(180deg, #fddbe5 0%, #d99bc8 36.91%, #4c1f70 100%);
+	padding: 112px 48px 80px;
+	position: relative;
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		margin-top: 48px;
+		position: relative;
+	}
+
+	&__content-details {
+		margin-top: 80px;
+		width: 100%;
+		max-width: 600px;
+
+		.preamble {
+			font-family: @font-ProximaSoft-Bold;
+			font-size: 0.2rem;
+			line-height: 1.2;
+			letter-spacing: 0.2px;
+			color: rgba(255, 255, 255, 0.8);
+			text-transform: uppercase;
+			margin-bottom: 18px;
+		}
+
+		.cashback-row {
+			width: 100%;
+			font-family: @font-ProximaSoft-SemiBold;
+			line-height: 1;
+			color: @color-white;
+
+			&.row-1 {
+				border-radius: 12px;
+				margin-bottom: 14px;
+				background: url('../../assets/images/backgrounds/cashback-m.png') left / cover no-repeat;
+				padding: 32px 0 28px;
+				width: 100%;
+
+				.block-wrap {
+					width: 100%;
+					max-width: 300px;
+					margin: 0 auto 0 150px;
+				}
+
+				.block-title {
+					font-size: 0.4rem;
+					margin-bottom: 9px;
+				}
+
+				.block-amount {
+					font-size: 0.64rem;
+				}
+			}
+
+			&.row-2 {
+				display: flex;
+				width: 100%;
+				gap: 10px;
+				height: 242px;
+
+				> div > .block {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					height: 100%;
+				}
+
+				.a-rewards {
+					background: url('../../assets/images/backgrounds/a-rewards.png') left / contain no-repeat;
+					width: 380px;
+
+					.block {
+						align-items: flex-end;
+						padding-right: 38px;
+						font-size: 0.32rem;
+
+						.block-wrap {
+							text-align: center;
+						}
+
+						.block-title {
+							margin-bottom: 13px;
+						}
+					}
+				}
+
+				.vouchers {
+					background: url('../../assets/images/backgrounds/vouchers.png') left / contain no-repeat;
+					width: 220px;
+					padding-top: 32px;
+					.block {
+						font-size: 0.28rem;
+
+						.block-amount {
+							margin-top: 8px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	& .YearEndReview__h2.rewards {
+		font-family: @font-ProximaSoft-Medium;
+		font-size: 0.44rem;
+		line-height: 1.2;
+		color: rgba(99, 47, 108, 0.8);
+		max-width: 21ch;
+
+		& .YearEndReview-rewards__span-amount {
+			display: block;
+			margin-top: 8px;
+			font-family: @font-ProximaSoft-Bold;
+			font-size: 0.88rem;
+			line-height: 1;
+			letter-spacing: -1.76px;
+			background: linear-gradient(360deg, #683371 20.45%, #8b3c99 85.23%);
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+	}
+}
