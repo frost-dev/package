@@ -3,3 +3,4 @@ export { default as TopThreeActivities } from './src/screens/top-three-activitie
 export { default as SendMoney } from './src/screens/send-money/index.vue';
 export { default as SendMoneySingle } from './src/screens/send-money-single/index.vue';
 export { default as Bills } from './src/screens/bills/index.vue';
+export { default as Rewards } from './src/screens/rewards/index.vue';
