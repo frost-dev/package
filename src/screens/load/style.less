@@ -1,0 +1,89 @@
+@import '../../assets/less/style.less';
+
+.YearEndReview-buy-load {
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+	height: 100dvh;
+	background: url('../../assets/images/backgrounds/load.jpg') center/cover no-repeat;
+	padding: 112px 48px 80px;
+	justify-content: space-between;
+	position: relative;
+
+	&__wrapper {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		margin-top: auto;
+		margin-bottom: 117px;
+		position: relative;
+	}
+
+	&__details {
+		transform: translate(-4%, -38%);
+		font-family: @font-ProximaSoft-Medium;
+		line-height: 1.2;
+
+		.favorite-load {
+			font-size: 0.18rem;
+
+			text-align: center;
+			transform: translate(0%, -349%);
+			color: #003c6a;
+
+			span {
+				font-family: @font-ProximaSoft-Bold;
+				text-transform: uppercase;
+				font-size: 0.2rem;
+			}
+		}
+
+		&-others {
+			color: @color-white;
+
+			div {
+				font-size: 0.22rem;
+				margin-bottom: 18px;
+			}
+
+			ol {
+				padding: 0;
+				margin: 10px 0 0;
+				list-style-position: inside;
+			}
+
+			.load-runnerups {
+				font-size: 0.28rem;
+				line-height: 1.2;
+			}
+		}
+	}
+
+	& .YearEndReview__h2.load {
+		font-family: @font-ProximaSoft-Medium;
+		font-size: 0.44rem;
+		line-height: 1.2;
+		color: rgba(238, 242, 249, 0.8);
+		max-width: 100%;
+		padding: 0px 16px;
+
+		& .YearEndReview-send__span-amount {
+			display: block;
+			margin-top: 8px;
+			font-family: @font-ProximaSoft-Bold;
+			font-size: 0.88rem;
+			line-height: 1;
+			letter-spacing: -1.76px;
+			background: linear-gradient(180deg, rgba(246, 249, 255, 1) 30%, rgba(2, 139, 255, 1) 180%);
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+	}
+}
