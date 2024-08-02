@@ -4,6 +4,6 @@ export { default as SendMoney } from './src/screens/send-money/index.vue';
 export { default as SendMoneySingle } from './src/screens/send-money-single/index.vue';
 export { default as Bills } from './src/screens/bills/index.vue';
 export { default as Rewards } from './src/screens/rewards/index.vue';
-export { default as Load } from './src/load/index.vue';
+export { default as Load } from './src/screens/load/index.vue';
 export { default as Insure } from './src/screens/insure/index.vue';
 export { default as Invest } from './src/screens/invest/index.vue';
