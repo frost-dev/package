@@ -2,33 +2,34 @@
 	<div
 		class="YearEndReview YearEnd-two-tiles"
 		style="background: linear-gradient(0deg, #0164b7, #0164b7), linear-gradient(360deg, rgba(0, 124, 220, 0) 53.91%, #007cdc 100%)"
+		ref="contentToCapture"
 	>
 		<div class="YearEnd-two-tiles__wrap">
 			<div class="YearEnd-two-tiles__content">
-				<div class="YearEnd-two-tiles__title">{{ title }}</div>
-				<div class="YearEnd-two-tiles__description">{{ description }}</div>
+				<div class="YearEnd-two-tiles__title">{{ dataConvert.title }}</div>
+				<div class="YearEnd-two-tiles__description">{{ dataConvert.description }}</div>
 				<div class="YearEnd-two-tiles__blocks">
 					<div
-						v-for="(block, index) in blocks"
+						v-for="(block, index) in dataConvert.blocks"
 						:key="index"
 						class="YearEnd-two-tiles__block"
-						:style="{ backgroundColor: getBlockColor(type, index) }"
+						:style="{ backgroundColor: getBlockColor(dataConvert.type, index) }"
 					>
-						<img :src="getBlockImage(type, index)" />
-						<div class="YearEnd-two-tiles__block-title">{{ getBlockTitle(type, index) }}</div>
+						<img :src="getBlockImage(dataConvert.type, index)" />
+						<div class="YearEnd-two-tiles__block-title">{{ getBlockTitle(dataConvert.type, index) }}</div>
 
 						<p v-if="index === 0">
-							You used this service <span>{{ block.used }}</span> times this year.
+							You used this service <span>{{ block.count }}</span> times this year.
 						</p>
-						<p v-if="index === 1">
-							You {{ type === 'Send' ? 'sent' : 'received' }} money to <span>{{ block.count }}</span> different users!
+						<p v-else-if="index === 1">
+							You {{ dataConvert.type === 'Send' ? 'sent' : 'received' }} money to <span>{{ block.count }}</span> different users!
 						</p>
 					</div>
 				</div>
 			</div>
 			<div class="YearEnd-Share-Footer">
-				<img src="../../../assets/images/icons/gcash-share-logo.svg" />
-				<span>Flashback 2024</span>
+				<img :src="require('../../../assets/images/icons/gcash-share-logo.svg')" />
+				<div>Flashback 2024</div>
 			</div>
 		</div>
 	</div>
@@ -42,10 +43,26 @@ export default {
 	props: {
 		title: String,
 		description: String,
-		blocks: Array,
+		blocks: Object,
 		type: String,
 		bg: String,
 	},
+
+	computed: {
+		dataConvert() {
+			return {
+				title: this.title,
+				description: this.description,
+				blocks: [
+					{ name: 'Frequency', count: this.blocks.frequency },
+					{ name: 'Users', count: this.blocks.users },
+				],
+				type: this.type,
+				bg: this.bg,
+			};
+		},
+	},
+
 	methods: {
 		getBlockColor(type, index) {
 			const colorSets = {
@@ -57,8 +74,8 @@ export default {
 		},
 		getBlockImage(type, index) {
 			const IconSet = {
-				Send: ['src/assets/images/plain/express-send.svg', 'src/assets/images/plain/profile.svg'],
-				Receive: ['src/assets/images/plain/request-money.svg', 'src/assets/images/plain/profile.svg'],
+				Send: [require('../../../assets/images/plain/express-send.svg'), require('../../../assets/images/plain/profile.svg')],
+				Receive: [require('../../../assets/images/plain/request-money.svg'), require('../../../assets/images/plain/profile.svg')],
 			};
 			return type && IconSet[type] ? IconSet[type][index % IconSet[type].length] : '';
 		},

@@ -30,7 +30,7 @@
 			</div>
 			<div class="YearEnd-Share-Footer">
 				<img src="../../../assets/images/icons/gcash-share-logo-white.svg" />
-				<span>Flashback 2024</span>
+				<div>Flashback 2024</div>
 			</div>
 		</div>
 	</div>

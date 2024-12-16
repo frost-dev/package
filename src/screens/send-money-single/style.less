@@ -1,0 +1,43 @@
+@import '../../assets/less/style.less';
+
+
+.YearEndReview-send-money-single {
+    height: 100dvh;
+    background: url('../../assets/images/plain/send-single-category-bg.jpg') center / cover no-repeat;
+    padding: @padding-cover-screens;
+    display: flex;
+    flex-direction: column;
+
+    & > .YearEndReview__h2 {
+        font-family: @font-ProximaSoft-Medium;
+        color: rgba(238, 242, 249, 0.8);
+        font-size: 0.44rem;
+        line-height: 1.2;
+        max-width: 100%;
+        margin-top: auto;
+        padding: 0px 16px;
+
+        & .YearEndReview__span-wrap {
+            margin-top: 32px;
+        }
+    }
+
+    & .YearEndReview__span-send {
+        font-family: @font-ProximaSoft-Medium;
+
+        &-new-line {
+            display: block;
+            color: rgba(238, 242, 249, 0.8);
+            font-family: @font-ProximaSoft-Medium;
+        }
+
+        &-amount, &-category, 
+        &-frequency, &-users {
+            color: @color-aqua-haze;
+        }
+    }
+    
+    & .YearEndReview-Btn {
+        margin: 54px auto 0px;
+    }
+}

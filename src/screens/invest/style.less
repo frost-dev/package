@@ -1,0 +1,111 @@
+@import '../../assets/less/style.less';
+
+.YearEndReview-invest-cover {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100dvh;
+  background: url('../../assets/images/backgrounds/ginvest.jpg') center/cover
+    no-repeat;
+  padding: 112px 48px 80px;
+  justify-content: space-between;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+  }
+
+  & .YearEndReview__h2.invest-intro {
+    font-family: @font-ProximaSoft-Medium;
+    font-size: 0.44rem;
+    line-height: 1.2;
+    color: rgba(238, 242, 249, 0.8);
+    max-width: 20ch;
+    margin-bottom: 32px;
+
+    & .YearEndReview-invest__span-amount {
+      display: block;
+      margin-top: 8px;
+      font-family: @font-ProximaSoft-Bold;
+      font-size: 0.88rem;
+      line-height: 1;
+      letter-spacing: -1.76px;
+      background: linear-gradient(
+          360deg,
+          rgba(1, 94, 195, 0.2) 13.74%,
+          rgba(2, 139, 255, 0) 80.15%
+        ),
+        #f6f9ff;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+.YearEndReview-invest {
+  &__chart {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 404px;
+
+    //temporary positioning
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 45px;
+    color: @color-white;
+
+    &-item {
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      &.gfunds {
+        transform: translateY(36%);
+      }
+
+      &.gcrypto {
+        transform: translateY(4%);
+      }
+
+      &.gstocks {
+        transform: translateY(-27%);
+      }
+
+      &__preamble {
+        font-size: 0.24rem;
+        font-family: @font-ProximaSoft-Regular;
+        font-weight: 500;
+        line-height: 1.2;
+        letter-spacing: 0.24px;
+      }
+
+      &__amount {
+        margin-top: 30px;
+        font-family: @font-ProximaSoft-Bold;
+        font-size: 0.32rem;
+        line-height: 1.2;
+        letter-spacing: 0.36px;
+        text-align: center;
+        max-width: 14ch;
+      }
+
+      &__interest {
+        margin-top: 30px;
+        font-family: @font-ProximaSoft-Regular;
+        font-size: 0.24rem;
+        line-height: 1.2;
+        letter-spacing: 0.36px;
+        text-align: center;
+        max-width: 14ch;
+      }
+    }
+  }
+}

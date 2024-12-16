@@ -1,6 +1,6 @@
 <template>
 	<div class="YearEndBarGraph">
-		<div class="YearEndBarGraph__title">Points Breakdown</div>
+		<div class="YearEndBarGraph__title">{{ label }}</div>
 		<div class="YearEndBarGraph__bar-graph">
 			<div
 				v-for="(bar, index) in bars"
@@ -22,7 +22,13 @@
 							alt="Icon"
 						/>
 					</div>
-					<div class="YearEndBarGraph__bar-value">{{ bar['ep-breakdown'] }}</div>
+					<div class="YearEndBarGraph__bar-value">
+						{{ bar['ep-breakdown'] }}
+						
+					</div>
+					<div v-if="index === 0" class="YearEndBarGraph__bar-value value-label">
+						{{ valueLabel }}
+					</div>
 				</div>
 				<div class="YearEndBarGraph__bar-label">{{ bar.name }}</div>
 			</div>
@@ -36,14 +42,24 @@ import './style.less';
 export default {
 	name: 'BarGraph',
 	props: {
+		valueLabel: {
+			type: String,
+		},	
+		label: {
+			type: String,
+			required: true,
+		},
 		categories: {
 			type: Array,
 			required: true,
 		},
+		colors: {
+			type: Array,
+            required: true,
+		}
 	},
 	data() {
 		return {
-			colors: ['#96C754', '#F0BD45', '#138744'],
 			bars: [],
 		};
 	},
@@ -51,13 +67,30 @@ export default {
 		categoriesWithIcons() {
 			return this.categories.map((category) => {
 				let iconPath;
-				if (category.name === 'Express send') {
-					iconPath = require('../../assets/images/icons/send.svg');
-				} else if (category.name === 'Bank Transfer') {
-					iconPath = require('../../assets/images/icons/bank-transfer.svg');
-				} else if (category.name === 'Padala') {
-					iconPath = require('../../assets/images/icons/gcash-padala.svg');
+
+				switch(category.name) {
+					case 'Express send':
+						iconPath = require('../../assets/images/icons/express-send.svg');
+                        break;
+                    case 'Bank Transfer':
+						iconPath = require('/src/assets/images/icons/bank-transfer.svg');
+						break;
+					case 'Padala':
+						iconPath = require('../../assets/images/icons/gcash-padala.svg');
+						break;
+					case 'Shopping':
+						iconPath = require('../../assets/images/icons/shopping.svg');
+						break;
+					case 'Load':
+						iconPath = require('../../assets/images/icons/load.svg');
+						break;
+					case 'Send':
+						iconPath = require('../../assets/images/icons/express-send-receive.svg');
+						break;
+					default: 
+						iconPath = require('../../assets/images/icons/send.svg');
 				}
+
 				return {
 					...category,
 					icon: iconPath,

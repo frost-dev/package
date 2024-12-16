@@ -1,14 +1,14 @@
 @import '../../../assets/less/style.less';
 
 .YearEnd-two-tiles {
-	height: 100%;
+	height: 100dvh;
 
 	&__wrap {
 		height: 100%;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		padding-bottom: 12px;
+		padding: 0 52px 24px;
 	}
 
 	&__content {
@@ -17,7 +17,7 @@
 	}
 
 	&__title {
-		font-size: 2.57rem;
+		font-size: 0.72rem;
 		line-height: 1;
 		letter-spacing: -0.04em;
 		color: @color-white;
@@ -26,48 +26,52 @@
 	&__description {
 		font-family: @font-ProximaSoft-SemiBold;
 		font-weight: 600;
-		font-size: 0.71rem;
+		font-size: 0.2rem;
 		line-height: 1.4;
 		color: rgba(255, 255, 255, 0.7);
-		margin-top: 8px;
+		margin-top: 16px;
 	}
 
 	&__blocks {
 		display: flex;
-		gap: 4px;
+		gap: 8px;
 		width: 100%;
 		justify-content: center;
-		margin-top: 40px;
+		margin-top: 80px;
 	}
 
 	&__block {
-		padding: 23px 12px;
-		border-radius: 8px;
+		padding: 46px 24px;
+		border-radius: 16px;
 		color: @color-white;
 		width: 100%;
 
 		> p {
 			font-family: @font-ProximaSoft-SemiBold;
 			font-weight: 600;
-			font-size: 0.71rem;
+			font-size: 0.2rem;
 			line-height: 1.2;
 			letter-spacing: -0.02em;
 			color: rgba(255, 255, 255, 0.8);
 
 			span {
-				font-size: 1.17rem;
-				margin-top: 4px;
+				font-size: 0.56rem;
+				margin-top: 8px;
 				display: block;
 			}
+		}
+
+		> img {
+			min-width: 80px;
 		}
 	}
 
 	&__block-title {
-		font-size: 0.71rem;
+		font-size: 0.2rem;
 		line-height: 1;
 		letter-spacing: -0.01em;
 		color: rgba(255, 255, 255, 0.8);
-		margin-top: 6px;
+		margin-top: 12px;
 	}
 
 	&__title,
@@ -82,10 +86,14 @@
 	justify-content: space-between;
 	align-items: center;
 
-	> span {
+	> img {
+		min-width: 144px;
+	}
+
+	> div {
 		font-family: @font-Gilroy-Bold;
 		text-transform: uppercase;
-		font-size: 0.57rem;
+		font-size: 0.16rem;
 		line-height: 1.4;
 		letter-spacing: 0.2em;
 		color: rgba(255, 255, 255, 0.5);
